@@ -1,9 +1,6 @@
--- Ejecuta esto en Railway (Connect -> SQL Editor)
--- Limpieza opcional
+
 DROP TABLE IF EXISTS tareas;
 DROP TABLE IF EXISTS usuarios;
-
--- Usuarios
 CREATE TABLE usuarios (
   id INT NOT NULL AUTO_INCREMENT,
   nombre VARCHAR(100) NOT NULL,
@@ -12,8 +9,6 @@ CREATE TABLE usuarios (
   created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
--- Tareas
 CREATE TABLE tareas (
   id INT NOT NULL AUTO_INCREMENT,
   usuario_id INT NOT NULL,
